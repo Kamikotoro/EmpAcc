@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.MinButton = new System.Windows.Forms.Button();
             this.MaxButton = new System.Windows.Forms.Button();
@@ -51,13 +51,6 @@
             this.EmpAccTabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.EmpDataGrid = new System.Windows.Forms.DataGridView();
-            this.DivTab = new System.Windows.Forms.TabPage();
-            this.DivDataGrid = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.StatTab = new System.Windows.Forms.TabPage();
-            this.EmpChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,9 +63,16 @@
             this.dateEmpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DivTab = new System.Windows.Forms.TabPage();
+            this.DivDataGrid = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.StatTab = new System.Windows.Forms.TabPage();
+            this.EmpChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.employeesTableAdapter = new EmpAcc.EmpAccDBDataSetTableAdapters.EmployeesTableAdapter();
             this.divisionTableAdapter = new EmpAcc.EmpAccDBDataSetTableAdapters.DivisionTableAdapter();
             this.ChartBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -86,14 +86,14 @@
             this.EmpAccTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmpDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.divisionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empAccDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             this.DivTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DivDataGrid)).BeginInit();
             this.panel3.SuspendLayout();
             this.StatTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmpChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.divisionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empAccDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartViewBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -309,102 +309,6 @@
             this.EmpDataGrid.TabIndex = 3;
             this.EmpDataGrid.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmpDataGrid_EditEnd);
             // 
-            // DivTab
-            // 
-            this.DivTab.Controls.Add(this.DivDataGrid);
-            this.DivTab.Controls.Add(this.panel3);
-            this.DivTab.Location = new System.Drawing.Point(4, 22);
-            this.DivTab.Name = "DivTab";
-            this.DivTab.Padding = new System.Windows.Forms.Padding(3);
-            this.DivTab.Size = new System.Drawing.Size(719, 459);
-            this.DivTab.TabIndex = 1;
-            this.DivTab.Text = "Подразделения";
-            this.DivTab.UseVisualStyleBackColor = true;
-            // 
-            // DivDataGrid
-            // 
-            this.DivDataGrid.AllowUserToAddRows = false;
-            this.DivDataGrid.AllowUserToDeleteRows = false;
-            this.DivDataGrid.AllowUserToResizeColumns = false;
-            this.DivDataGrid.AllowUserToResizeRows = false;
-            this.DivDataGrid.AutoGenerateColumns = false;
-            this.DivDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DivDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DivDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn1,
-            this.titleDataGridViewTextBoxColumn,
-            this.parentDataGridViewTextBoxColumn});
-            this.DivDataGrid.DataSource = this.divisionBindingSource;
-            this.DivDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DivDataGrid.Location = new System.Drawing.Point(3, 30);
-            this.DivDataGrid.Name = "DivDataGrid";
-            this.DivDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DivDataGrid.Size = new System.Drawing.Size(713, 426);
-            this.DivDataGrid.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.comboBox2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(713, 27);
-            this.panel3.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(0, 0);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(592, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(592, 0);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 0;
-            // 
-            // StatTab
-            // 
-            this.StatTab.Controls.Add(this.EmpChart);
-            this.StatTab.Location = new System.Drawing.Point(4, 22);
-            this.StatTab.Name = "StatTab";
-            this.StatTab.Size = new System.Drawing.Size(719, 459);
-            this.StatTab.TabIndex = 2;
-            this.StatTab.Text = "Статистика";
-            this.StatTab.UseVisualStyleBackColor = true;
-            // 
-            // EmpChart
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.EmpChart.ChartAreas.Add(chartArea2);
-            this.EmpChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.EmpChart.Legends.Add(legend2);
-            this.EmpChart.Location = new System.Drawing.Point(0, 0);
-            this.EmpChart.Name = "EmpChart";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "Dis";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.Legend = "Legend1";
-            series4.Name = "Emp";
-            this.EmpChart.Series.Add(series3);
-            this.EmpChart.Series.Add(series4);
-            this.EmpChart.Size = new System.Drawing.Size(719, 459);
-            this.EmpChart.TabIndex = 1;
-            this.EmpChart.Text = "chart1";
-            title2.Name = "Title";
-            title2.Text = "Сотрудники/Уволенные";
-            this.EmpChart.Titles.Add(title2);
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -480,6 +384,39 @@
             this.employeesBindingSource.DataMember = "Employees";
             this.employeesBindingSource.DataSource = this.empAccDBDataSet;
             // 
+            // DivTab
+            // 
+            this.DivTab.Controls.Add(this.DivDataGrid);
+            this.DivTab.Controls.Add(this.panel3);
+            this.DivTab.Location = new System.Drawing.Point(4, 22);
+            this.DivTab.Name = "DivTab";
+            this.DivTab.Padding = new System.Windows.Forms.Padding(3);
+            this.DivTab.Size = new System.Drawing.Size(719, 459);
+            this.DivTab.TabIndex = 1;
+            this.DivTab.Text = "Подразделения";
+            this.DivTab.UseVisualStyleBackColor = true;
+            // 
+            // DivDataGrid
+            // 
+            this.DivDataGrid.AllowUserToAddRows = false;
+            this.DivDataGrid.AllowUserToDeleteRows = false;
+            this.DivDataGrid.AllowUserToResizeColumns = false;
+            this.DivDataGrid.AllowUserToResizeRows = false;
+            this.DivDataGrid.AutoGenerateColumns = false;
+            this.DivDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DivDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DivDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn1,
+            this.titleDataGridViewTextBoxColumn,
+            this.parentDataGridViewTextBoxColumn});
+            this.DivDataGrid.DataSource = this.divisionBindingSource;
+            this.DivDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DivDataGrid.Location = new System.Drawing.Point(3, 30);
+            this.DivDataGrid.Name = "DivDataGrid";
+            this.DivDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DivDataGrid.Size = new System.Drawing.Size(713, 426);
+            this.DivDataGrid.TabIndex = 5;
+            // 
             // iDDataGridViewTextBoxColumn1
             // 
             this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
@@ -503,6 +440,69 @@
             this.parentDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.parentDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.parentDataGridViewTextBoxColumn.ValueMember = "ID";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.comboBox2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(713, 27);
+            this.panel3.TabIndex = 4;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(592, 20);
+            this.textBox2.TabIndex = 1;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(592, 0);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 0;
+            // 
+            // StatTab
+            // 
+            this.StatTab.Controls.Add(this.EmpChart);
+            this.StatTab.Location = new System.Drawing.Point(4, 22);
+            this.StatTab.Name = "StatTab";
+            this.StatTab.Size = new System.Drawing.Size(719, 459);
+            this.StatTab.TabIndex = 2;
+            this.StatTab.Text = "Статистика";
+            this.StatTab.UseVisualStyleBackColor = true;
+            // 
+            // EmpChart
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.EmpChart.ChartAreas.Add(chartArea1);
+            this.EmpChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.EmpChart.Legends.Add(legend1);
+            this.EmpChart.Location = new System.Drawing.Point(0, 0);
+            this.EmpChart.Name = "EmpChart";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Dis";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Emp";
+            this.EmpChart.Series.Add(series1);
+            this.EmpChart.Series.Add(series2);
+            this.EmpChart.Size = new System.Drawing.Size(719, 459);
+            this.EmpChart.TabIndex = 1;
+            this.EmpChart.Text = "chart1";
+            title1.Name = "Title";
+            title1.Text = "Сотрудники/Уволенные";
+            this.EmpChart.Titles.Add(title1);
             // 
             // employeesTableAdapter
             // 
@@ -557,15 +557,15 @@
             this.EmpAccTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EmpDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.divisionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empAccDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
             this.DivTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DivDataGrid)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.StatTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EmpChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.divisionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empAccDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartViewBindingSource)).EndInit();
             this.ResumeLayout(false);
